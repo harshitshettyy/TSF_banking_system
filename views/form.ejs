@@ -1,16 +1,70 @@
 <%- include("partials/header") %>
-<div class='box-container'>
+<!-- <div class='box-container'>
 	<div class="form-body1">
     <h1 class="transfer1">Transferring From : </h1>
     <h3>Customer Name : <%= fromUser.name %></h3>
-    <h3>Credits = <%= fromUser.credits %></h3>  
+    <h3>Credits = <%= fromUser.credits %></h3>  -->
+    <!-- <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success transfer1">Transferring From </div>
+        <div class="card-body text-success">
+          <h5 class="card-title">Customer Name : <%= fromUser.name %></h5>
+          <p class="card-text">Credits = <%= fromUser.credits %></p>
+        </div>
+        <div class="card-footer bg-transparent border-success">Footer</div>
+      </div>  -->
 
-    <h1 class ='transfer1'>Transferring To : </h1>
+    <!-- <h1 class ='transfer1'>Transferring To : </h1>
     <h3>Customer Name : <%= toUser.name %></h3>
     <h3>Credits = <%= toUser.credits %></h3>
-	</div>
+	</div> -->
+    <!-- <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success transfer1">Transferring To :</div>
+        <div class="card-body text-success">
+          <h5 class="card-title">Customer Name : <%= toUser.name %></h5>
+          <p class="card-text">Credits = <%= toUser.credits %></p>
+        </div>
+        <div class="card-footer bg-transparent border-success">Footer</div>
+      </div> -->
+      
+      <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <div class="card-footer bg-transparent border-success">Transferring To :</div>
+            <div class="card-body">
+                <div class="card-body text-success">
+                <h5 class="card-title">Customer Name : <%= fromUser.name %></h5>
+            </div>
+            <p class="card-text">Credits = <%= fromUser.credits %></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="form">
+                <form action="/view/<%= fromUser._id %>/<%= toUser._id %>?_method=PUT" method="POST">
+                <label for="credits">No. of Credits to be transferred :</label>
+                <br>
+                <input type="number" id="credit" name="credit" placeholder=""
+                       value="">
+                <br>
+                <button class="transfer2-btn">Transfer</button>
+                </form>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Customer Name : <%= toUser.name %></h5>
+                <p class="card-text">Credits = <%= toUser.credits %></p>
+            </div>
+          </div>
+        </div> -->
+        
 
-<div class="form">
+<!-- <div class="form">
     <form action="/view/<%= fromUser._id %>/<%= toUser._id %>?_method=PUT" method="POST">
     <label for="credits">No. of Credits to be transferred :</label>
     <br>
@@ -19,9 +73,40 @@
     <br>
     <button class="transfer2-btn">Transfer</button>
     </form>
+</div> -->
+
+<div class="card-group mx-auto">
+    <div class="card p-3 mb-2 bg-transparent text-light">
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h1 class="transfer1">Transferring From : </h1>
+        <h3>Customer Name : <%= fromUser.name %></h3>
+        <h3>Credits = <%= fromUser.credits %></h3> 
+      </div>
+    </div>
+    <div class="card p-3 mb-2 bg-transparent text-light mx-auto">
+        <div class="form ">
+            <form action="/view/<%= fromUser._id %>/<%= toUser._id %>?_method=PUT" method="POST">
+            <label for="credits">No. of Credits to be transferred :</label>
+            <br>
+            <input type="number" id="credit" name="credit" placeholder=""
+                   value="">
+            <br>
+            <button class="transfer2-btn">Transfer</button>
+            </form>
+        </div>
+    </div>
+    <div class="card p-3 mb-2 bg-transparent text-light mx-auto">
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h1 class ='transfer1'>Transferring To : </h1>
+    <h3>Customer Name : <%= toUser.name %></h3>
+    <h3>Credits = <%= toUser.credits %></h3>
+      </div>
+    </div>
+  </div>
 </div>
 
-</div>
 	
 
 <%- include("partials/footer") %>

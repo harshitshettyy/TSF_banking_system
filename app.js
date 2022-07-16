@@ -8,7 +8,7 @@ const methodOverride =require('method-override');
 const User = require('./models/user');
 const Transaction = require('./models/transaction');
 
-mongoose.connect('mongodb+srv://harshit:harshit23@cluster0.nnvuwmu.mongodb.net/test',{
+mongoose.connect('mongodb://localhost:27017/TSF_harshit',{
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
